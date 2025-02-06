@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "framework": "nextjs",
+  "env": {
+    "NEXTAUTH_URL": "https://eduwell.vercel.app",
+    "NEXTAUTH_SECRET": "a-very-long-and-secure-secret-key-at-least-32-chars",
+    "REPLICATE_API_TOKEN": "r8_JuxSNMohuwgn8OuMn9Sw9wLhJr5BZej2eBkSt"
+  }
+} 

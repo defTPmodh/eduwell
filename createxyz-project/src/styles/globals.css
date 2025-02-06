@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-sage: #94A187;
+  --color-moss: #7C8B74;
+  --color-cream: #F5F1E8;
+  --color-leaf: #4A5D45;
+  --color-earth: #6B4F3D;
+}
+
+/* Base styles */
+@layer base {
+  body {
+    @apply bg-gradient-to-b from-[#F5F1E8] to-[#E8E4DB];
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+/* Component styles */
+@layer components {
+  .meditation-container {
+    @apply p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm border border-[#94A187]/20;
+  }
+
+  .chat-container {
+    @apply bg-white/80 backdrop-blur-sm rounded-xl shadow-sm border border-[#94A187]/20;
+  }
+
+  .nav-container {
+    @apply bg-white/80 backdrop-blur-md border-b border-[#94A187]/20;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 bg-[#94A187] text-white rounded-lg hover:bg-[#7C8B74] transition-colors
+    disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-white/80 text-[#4A5D45] border border-[#94A187] rounded-lg 
+    hover:bg-[#94A187]/10 transition-colors;
+  }
+
+  .input-primary {
+    @apply p-2 border border-[#94A187]/30 rounded-lg bg-white/80 focus:ring-2 
+    focus:ring-[#94A187] focus:border-transparent outline-none;
+  }
+
+  .card {
+    @apply bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-[#94A187]/20
+    hover:shadow-md transition-all duration-300;
+  }
+
+  .meditation-header {
+    @apply flex justify-between items-center mb-6;
+  }
+
+  .streak-badge {
+    @apply flex items-center gap-2 px-3 py-1 bg-yellow-50 text-yellow-700 rounded-full text-sm;
+  }
+
+  .streak-icon {
+    @apply text-yellow-500;
+  }
+
+  .meditation-options {
+    @apply space-y-4;
+  }
+
+  .meditation-option {
+    @apply flex justify-between items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors;
+  }
+
+  .option-info {
+    @apply flex items-center gap-4;
+  }
+
+  .option-icon {
+    @apply text-2xl;
+  }
+
+  .start-button {
+    @apply px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors;
+  }
+
+  .duration {
+    @apply text-sm text-gray-500;
+  }
+}
+
+/* Utility styles */
+@layer utilities {
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: .5;
+    }
+  }
+} 
